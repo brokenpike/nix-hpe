@@ -31,7 +31,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+####  services.xserver.enable = true;
 # Enable Tailscale
   services.tailscale.enable = true;
   systemd.services.tailscale-autoconnect = {
@@ -58,8 +58,8 @@
 
 
   # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+####  services.xserver.displayManager.gdm.enable = true;
+####  services.xserver.desktopManager.gnome.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -117,7 +117,7 @@ services.xserver.displayManager.gdm.autoSuspend = false;
     description = "scott";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
+    #  firefox
     #  thunderbird
     ];
   };
