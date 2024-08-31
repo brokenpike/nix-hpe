@@ -139,6 +139,7 @@ services.xserver.displayManager.gdm.autoSuspend = false;
     pkgs.git
     pkgs.curl
     pkgs.wget
+    pkgs.gh
   ];
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
