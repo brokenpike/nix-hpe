@@ -53,7 +53,7 @@
       sleep 2
 
       # otherwise authenticate with tailscale
-      ${tailscale}/bin/tailscale up --advertise-exit-node
+      ${tailscale}/bin/tailscale up --advertise-exit-node  --ssh
     '';
   };
 
@@ -94,8 +94,8 @@ services.xserver.displayManager.gdm.autoSuspend = false;
   };	
 
   # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  #sound.enable = true;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
