@@ -71,7 +71,7 @@
 
 # disable auto suspend
 
-services.xserver.displayManager.gdm.autoSuspend = false;
+services.displayManager.gdm.autoSuspend = false;
   security.polkit.extraConfig = ''
     polkit.addRule(function(action, subject) {
         if (action.id == "org.freedesktop.login1.suspend" ||
