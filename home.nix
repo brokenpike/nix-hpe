@@ -6,15 +6,16 @@
   home.homeDirectory = "/home/scott";
 
   home.packages = with pkgs; [
-  helix
   btop
+  fish
+  git
+  git-credential-manager
+  helix
+  lm_sensors
  # lsp-ai
   nil
   nix-output-monitor
   vim
-  lm_sensors
-  git
-  git-credential-manager
   ];
 
   programs.git = {
