@@ -4,7 +4,7 @@
   inputs = {
     # NixOS official package source, using the nixos-24.11 branch here
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
  #   nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     determinate = {
       url = "https://flakehub.com/f/DeterminateSystems/determinate/0.1";
