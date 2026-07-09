@@ -20,10 +20,10 @@
 
   programs.git = {
     enable = true;
-    userName = "brokenpike";
-    userEmail = "brokenpike@garmr.org";
-    extraConfig.credential.helper = "manager";
-    extraConfig.credential.credentialStore = "cache";
+    settings.user.name = "brokenpike";
+    settings.user.email = "brokenpike@garmr.org";
+    settings.credential.helper = "manager";
+    settings.credential.credentialStore = "cache";
   };
 
   home.stateVersion = "25.05";
