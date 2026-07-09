@@ -35,27 +35,27 @@
   # Enable the X11 windowing system.
 ####  services.xserver.enable = true;
 # Enable Tailscale
-  services.tailscale.enable = true;
-  systemd.services.tailscale-autoconnect = {
-    description = "Automatic connection to Tailscale";
+  # services.tailscale.enable = true;
+  # systemd.services.tailscale-autoconnect = {
+  #   description = "Automatic connection to Tailscale";
 
-    # make sure tailscale is running before trying to connect to tailscale
-    after = [ "network-pre.target" "tailscale.service" ];
-    wants = [ "network-pre.target" "tailscale.service" ];
-    wantedBy = [ "multi-user.target" ];
+  #   # make sure tailscale is running before trying to connect to tailscale
+  #   after = [ "network-pre.target" "tailscale.service" ];
+  #   wants = [ "network-pre.target" "tailscale.service" ];
+  #   wantedBy = [ "multi-user.target" ];
 
-    # set this service as a oneshot job
-    serviceConfig.Type = "oneshot";
+  #   # set this service as a oneshot job
+  #   serviceConfig.Type = "oneshot";
 
-    # have the job run this shell script
-    script = with pkgs; ''
-      # wait for tailscaled to settle
-      sleep 2
+  #   # have the job run this shell script
+  #   script = with pkgs; ''
+  #     # wait for tailscaled to settle
+  #     sleep 2
 
-      # otherwise authenticate with tailscale
-      ${tailscale}/bin/tailscale up --advertise-exit-node  --ssh
-    '';
-  };
+  #     # otherwise authenticate with tailscale
+  #     ${tailscale}/bin/tailscale up --advertise-exit-node  --ssh
+  #   '';
+  # };
 
 
 
