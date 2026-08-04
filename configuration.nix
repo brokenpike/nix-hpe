@@ -35,7 +35,7 @@
   # Enable the X11 windowing system.
 ####  services.xserver.enable = true;
 # Enable Tailscale
-  # services.tailscale.enable = true;
+   services.tailscale.enable = true;
   # systemd.services.tailscale-autoconnect = {
   #   description = "Automatic connection to Tailscale";
 
